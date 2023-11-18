@@ -9,6 +9,13 @@ import ListItem from '@mui/material/ListItem';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import PhotographerCard from '@/app/components/PhotographerCard';
+import FAQ from '@/app/components/FAQ'
+import { Noto_Sans_TC } from 'next/font/google'
+
+const noto_sans_tc = Noto_Sans_TC({
+  subsets: ['latin'],
+  weight: ['700']
+});
 
 const photographerData = [
   {
@@ -47,7 +54,15 @@ const photographerData = [
 
 export default function HomePage() {
   return (
+    <>
+
     <Container component="section">
+      <Typography variant='h3' component="h2" sx={{
+        color: 'white',
+        fontSize: 32,
+        textAlign: 'center',
+        marginBottom: 3
+      }} className={noto_sans_tc.className}>精選攝影師</Typography>
       <Grid container rowSpacing={3} columnSpacing={3} component="ul">
         {photographerData.map((card) => (
           <Grid sm={6} md={3} key={card.id} sx={{
@@ -63,5 +78,16 @@ export default function HomePage() {
         ))}
       </Grid>
     </Container>
+    <Container component="section" sx={{
+      marginY: 6
+    }}>
+      <Typography variant='h3' component="h2" sx={{
+        fontSize: 32,
+        textAlign: 'center',
+        marginBottom: 3
+      }} className={noto_sans_tc.className}>常見問題</Typography>
+      <FAQ />
+    </Container>
+    </>
   );
 }

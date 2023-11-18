@@ -7,6 +7,8 @@ import Typography from '@mui/material/Typography';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
+import StarIcon from '@mui/icons-material/star';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 export default function PhotographerCard({
   name,
@@ -16,6 +18,7 @@ export default function PhotographerCard({
   price,
 }) {
   return (
+
     <Card
       sx={{
         position: 'relative',
@@ -47,9 +50,18 @@ export default function PhotographerCard({
           justifyContent: 'space-between',
         }}
       >
-        <Typography variant="body2" color="text.secondary">
-          {location}
-        </Typography>
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'space-between',
+          }}
+        >
+          <Typography variant="body2" color="text.secondary">
+            {location}
+          </Typography>
+          <FavoriteBorderIcon />
+        </Box>
+
         <Box>
           <Typography
             gutterBottom
@@ -59,7 +71,10 @@ export default function PhotographerCard({
               fontSize: 18,
             }}
           >
-            {name} <Chip label={rate} />
+            {name} <StarIcon sx={{
+              marginRight: 1
+            }} />
+            {rate}
           </Typography>
           <Stack direction="row" spacing={1} flexWrap="wrap">
             {catagories.map((item, index) => (
@@ -73,7 +88,7 @@ export default function PhotographerCard({
             ))}
           </Stack>
           <Typography variant="body2" color="text.secondary">
-            {price}
+            NT ${price} / 小時
           </Typography>
         </Box>
       </CardContent>
