@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
 import Container from '@mui/material/Container';
@@ -78,8 +77,11 @@ export default function HomePage() {
         ))}
       </Grid>
     </Container>
-    <Container component="section" sx={{
-      marginY: 6
+    <Box component="section" sx={{
+      backgroundColor: 'rgba(247, 247, 247, 1)'
+    }}>
+    <Container sx={{
+      paddingY: 6
     }}>
       <Typography variant='h3' component="h2" sx={{
         fontSize: 32,
@@ -88,6 +90,7 @@ export default function HomePage() {
       }} className={noto_sans_tc.className}>常見問題</Typography>
       <FAQ />
     </Container>
+    </Box>
     </>
   );
 }

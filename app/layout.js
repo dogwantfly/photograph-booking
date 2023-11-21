@@ -14,7 +14,10 @@ const noto_sans_tc = Noto_Sans_TC({
 // });
 
 export const metadata = {
-  title: '隨旅拍',
+  title: {
+    template: '%s | 隨旅拍',
+    default: '隨旅拍',
+  },
   description: '隨行攝影預約服務',
 }
 

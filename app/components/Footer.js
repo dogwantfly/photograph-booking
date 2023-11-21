@@ -10,12 +10,13 @@ export default function Footer() {
         position: 'relative',
         color: 'white',
         textAlign: 'center',
+        marginY: {'xs': 3, 'md': 6}
       }}
       component="footer">
       <Box sx={{
         position: 'absolute',
         left: '24px',
-        right: '24px',
+        right:'24px',
         top: 0,
         bottom: 0,
         display: 'flex',
