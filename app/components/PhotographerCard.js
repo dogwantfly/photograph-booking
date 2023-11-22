@@ -23,7 +23,7 @@ export default function PhotographerCard({
       }}
     >
       <Image
-        alt="Random image"
+        alt="photographer-card"
         src="/photographer-card-1.png"
         width={319}
         height={424}

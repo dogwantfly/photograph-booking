@@ -1,14 +1,10 @@
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
 import Container from '@mui/material/Container';
-import Drawer from '@mui/material/Drawer';
 import Typography from '@mui/material/Typography';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import Alert from '@mui/material/Alert';
-import AlertTitle from '@mui/material/AlertTitle';
 import PhotographerCard from '@/app/components/PhotographerCard';
 import FAQ from '@/app/components/FAQ'
+import Marquee from '@/app/components/Marquee';
 import { Noto_Sans_TC } from 'next/font/google'
 
 const noto_sans_tc = Noto_Sans_TC({
@@ -54,8 +50,8 @@ const photographerData = [
 export default function HomePage() {
   return (
     <>
-
-    <Container component="section">
+    <Marquee />
+    <Container component="section" sx={{ paddingTop: 10, paddingBottom: 16}}>
       <Typography variant='h3' component="h2" sx={{
         color: 'white',
         fontSize: 32,
