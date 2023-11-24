@@ -65,7 +65,16 @@ export default function Footer() {
   }}/>
   </Box>
 </Box>
-<Image alt="隨旅拍" src="/logo_light.svg" width={240} height={64} sizes="(min-width: 768px) 240px 64px, 120px 32px" />
+<Box sx={{
+  width: {
+    xs: '120px',
+    sm: '240px'
+  },
+  margin: '0 auto'
+}}>
+<Image alt="隨旅拍" src="/logo_light.svg" width={240} height={64} sizes="(min-width: 768px) 240px 64px, 120px 32px" style={{ maxWidth: '100%' }}/>
+</Box>
+
 <Typography
   sx={{
     fontSize: 14,
