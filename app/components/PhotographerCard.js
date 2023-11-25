@@ -14,6 +14,9 @@ import Button from '@mui/material/Button';
 import StarIcon from '@mui/icons-material/star';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Noto_Sans_TC } from 'next/font/google';
+import * as theme from '@/app/lib/theme'
+
+const black_card_text = theme.gradient.black_card_text
 
 const noto_sans_tc = Noto_Sans_TC({
   subsets: ['latin'],
@@ -101,10 +104,8 @@ export default function PhotographerCard({
           sx={{
             paddingTop: 7,
             paddingBottom: 1,
-            background:
-              'linear-gradient(180deg, rgba(31, 19, 0, 0) 0%, #1F1300 100%)',
+            background: black_card_text,
             padding: 2,
-            paddingRight: 0,
             color: 'white',
             position: 'absolute',
             zIndex: 3,

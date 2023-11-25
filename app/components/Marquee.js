@@ -3,11 +3,12 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Image from 'next/image';
 import { marquee as data } from '../lib/placeholder-data';
+import * as theme from '@/app/lib/theme';
 
 const oswald = Oswald({
   subsets: ['latin'],
-  weight: ['500'],
-});
+  weight: ['400', '700'],
+})
 
 export default function Marquee() {
   return (
@@ -18,7 +19,7 @@ export default function Marquee() {
         overflowX: 'hidden',
         gap: 4,
         alignItems: 'center',
-        backgroundColor: 'rgba(255, 245, 211, 1)',
+        backgroundColor: theme.macaron,
         paddingY: 2,
         border: '1px solid rgba(212, 212, 212, 1)',
         borderRight: 0,
@@ -70,8 +71,8 @@ export default function Marquee() {
                       xs: 24,
                       md: 48,
                     },
+                    fontFamily: oswald.style.fontFamily
                   }}
-                  className={oswald.className}
                 >
                   {item.slogan}
                 </Typography>

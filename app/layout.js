@@ -1,13 +1,6 @@
-import { Noto_Sans_TC } from 'next/font/google'
-import CssBaseline from '@mui/material/CssBaseline';
-import './globals.css'
-import Footer from '@/app/components/Footer'
-
-const noto_sans_tc = Noto_Sans_TC({
-  subsets: ['latin'],
-  weight: ['300','400','500','700']
-});
-
+import ThemeRegistry from '@/app/components/ThemeRegistry';
+import Footer from '@/app/components/Footer';
+import './globals.css';
 
 export const metadata = {
   title: {
@@ -15,16 +8,17 @@ export const metadata = {
     default: '隨旅拍',
   },
   description: '隨行攝影預約服務',
-}
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={noto_sans_tc.className}>
-        <CssBaseline/>
-        {children}
-        <Footer />
+      <body>
+        <ThemeRegistry options={{ key: 'mui' }}>
+          {children}
+          <Footer />
+        </ThemeRegistry>
       </body>
     </html>
-  )
+  );
 }
