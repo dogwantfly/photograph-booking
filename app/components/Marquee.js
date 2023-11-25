@@ -1,19 +1,8 @@
-'use client';
-
 import { Oswald } from 'next/font/google';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Image from 'next/image';
-import { keyframes } from '@mui/system';
-
-const marquee = keyframes`
-0%   {
-  transform: translateX(0);
-}
-100% {
-  transform: translateX(calc(-100% - 2em))
-}
-`;
+import { marquee as data } from '../lib/placeholder-data';
 
 const oswald = Oswald({
   subsets: ['latin'],
@@ -22,7 +11,6 @@ const oswald = Oswald({
 
 export default function Marquee() {
   return (
-
     <Box
       sx={{
         display: 'flex',
@@ -34,59 +22,88 @@ export default function Marquee() {
         paddingY: 2,
         border: '1px solid rgba(212, 212, 212, 1)',
         borderRight: 0,
-        borderLeft: 0
+        borderLeft: 0,
       }}
       component="section"
     >
-      {[...new Array(5)].map((_, index) => (
-
-        <Box
+      <Box
         sx={{
           display: 'flex',
-        flexWrap: 'nowrap',
-        gap: 4,
-        alignItems: 'center',
-        transform: 'translateX(-100px)',
-        whiteSpace: 'nowrap',
-        animation: `${marquee} 20s linear infinite`,
+          flexWrap: 'nowrap',
+          gap: 4,
+          alignItems: 'center',
+          transform: 'translateX(-100px)',
         }}
-        key={index}
-      > 
-      <Typography
-        variant="h3"
-        sx={{
-          fontSize: 48,
-
-        }}
-        className={oswald.className}
+        data-marquee
       >
-        Capture the Journey, Freeze the Beauty
-      </Typography>
-      <Image
-        alt="/marquee-icon-smile.png"
-        src="/marquee-icon-smile.png"
-        width={48}
-        height={48}
-      />
-      <Typography
-        variant="h3"
-        sx={{
-          fontSize: 48
-        }}
-        className={oswald.className}
-      >
-        Capture the Journey, Freeze the Beauty
-      </Typography>
-      <Image
-        alt="/marquee-icon-smile.png"
-        src="/marquee-icon-smile.png"
-        width={48}
-        height={48}
-      />
+        {data.map((item) => (
+          <Box
+            sx={{
+              display: 'flex',
+              flexWrap: 'nowrap',
+              gap: {
+                xs: 2,
+                md: 4,
+              },
+              alignItems: 'center',
+              whiteSpace: 'nowrap',
+            }}
+            key={item.slogan}
+          >
+            {item.icons.map((icon, icon_index) => (
+              <Box
+                key={icon_index}
+                sx={{
+                  display: 'flex',
+                  flexWrap: 'nowrap',
+                  gap: {
+                    xs: 2,
+                    md: 4,
+                  },
+                  alignItems: 'center',
+                }}
+              >
+                <Typography
+                  variant="h3"
+                  sx={{
+                    fontSize: {
+                      xs: 24,
+                      md: 48,
+                    },
+                  }}
+                  className={oswald.className}
+                >
+                  {item.slogan}
+                </Typography>
+                <Box
+                  sx={{
+                    width: {
+                      xs: '24px',
+                      lg: '48px',
+                    },
+                    height: {
+                      xs: '24px',
+                      lg: '48px',
+                    },
+                  }}
+                >
+                  <Image
+                    alt={icon}
+                    src={icon}
+                    width={48}
+                    height={48}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                    }}
+                  />
+                </Box>
+              </Box>
+            ))}
+          </Box>
+        ))}
       </Box>
-      ))}
-      
-      
     </Box>
   );
 }

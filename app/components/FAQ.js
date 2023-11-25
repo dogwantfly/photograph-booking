@@ -8,69 +8,8 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import { faq as qaData } from '../lib/placeholder-data';
 
-const qaData = [
-  {
-    question: '如何預約攝影師？',
-    answer:
-      '您可以參考首頁的預約流程，在我們的網站上瀏覽攝影師作品集，選擇您喜歡的攝影師後，直接進行線上預約。',
-    id: 0,
-  },
-  {
-    question: '如何預約攝影師？',
-    answer:
-      '您可以參考首頁的預約流程，在我們的網站上瀏覽攝影師作品集，選擇您喜歡的攝影師後，直接進行線上預約。',
-    id: 1,
-  },
-  {
-    question: '如何預約攝影師？',
-    answer:
-      '您可以參考首頁的預約流程，在我們的網站上瀏覽攝影師作品集，選擇您喜歡的攝影師後，直接進行線上預約。',
-    id: 2,
-  },
-  {
-    question: '如何預約攝影師？',
-    answer:
-      '您可以參考首頁的預約流程，在我們的網站上瀏覽攝影師作品集，選擇您喜歡的攝影師後，直接進行線上預約。',
-    id: 3,
-  },
-  {
-    question: '如何預約攝影師？',
-    answer:
-      '您可以參考首頁的預約流程，在我們的網站上瀏覽攝影師作品集，選擇您喜歡的攝影師後，直接進行線上預約。',
-    id: 4,
-  },
-  {
-    question: '如何預約攝影師？',
-    answer:
-      '您可以參考首頁的預約流程，在我們的網站上瀏覽攝影師作品集，選擇您喜歡的攝影師後，直接進行線上預約。',
-    id: 5,
-  },
-  {
-    question: '如何預約攝影師？',
-    answer:
-      '您可以參考首頁的預約流程，在我們的網站上瀏覽攝影師作品集，選擇您喜歡的攝影師後，直接進行線上預約。',
-    id: 6,
-  },
-  {
-    question: '如何預約攝影師？',
-    answer:
-      '您可以參考首頁的預約流程，在我們的網站上瀏覽攝影師作品集，選擇您喜歡的攝影師後，直接進行線上預約。',
-    id: 7,
-  },
-  {
-    question: '如何預約攝影師？',
-    answer:
-      '您可以參考首頁的預約流程，在我們的網站上瀏覽攝影師作品集，選擇您喜歡的攝影師後，直接進行線上預約。',
-    id: 8,
-  },
-  {
-    question: '如何預約攝影師？',
-    answer:
-      '您可以參考首頁的預約流程，在我們的網站上瀏覽攝影師作品集，選擇您喜歡的攝影師後，直接進行線上預約。',
-    id: 9,
-  },
-];
 const theme = {
   secondary: 'rgba(234, 80, 123, 1)'
 }

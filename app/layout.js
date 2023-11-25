@@ -1,4 +1,4 @@
-import { Noto_Sans_TC, Inter } from 'next/font/google'
+import { Noto_Sans_TC } from 'next/font/google'
 import CssBaseline from '@mui/material/CssBaseline';
 import './globals.css'
 import Footer from '@/app/components/Footer'
@@ -7,7 +7,7 @@ const noto_sans_tc = Noto_Sans_TC({
   subsets: ['latin'],
   weight: ['300','400','500','700']
 });
-// const inter = Inter({ subsets: ['latin'] })
+
 
 export const metadata = {
   title: {

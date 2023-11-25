@@ -26,6 +26,7 @@ export default function PhotographerCard({
   rate,
   catagories,
   price,
+  img_url
 }) {
   const theme = {
     secondary: 'rgba(234, 80, 123, 1)',
@@ -42,8 +43,8 @@ export default function PhotographerCard({
       }}
     >
       <Image
-        alt="photographer-card"
-        src="/photographer-card-1.png"
+        alt={img_url}
+        src={img_url}
         width={319}
         height={424}
         style={{
