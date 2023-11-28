@@ -1,5 +1,6 @@
 import ThemeRegistry from '@components/ThemeRegistry';
 import Footer from '@components/Footer';
+import Navbar from './components/Navbar';
 
 export const metadata = {
   title: {
@@ -17,6 +18,8 @@ export default function RootLayout(props) {
         <ThemeRegistry options={{ key: 'mui' }}>
           {children}
           <Footer />
+          <Navbar></Navbar>
+          {/* {children} */}
         </ThemeRegistry>
       </body>
     </html>
