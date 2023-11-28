@@ -1,4 +1,5 @@
 import ThemeRegistry from '@components/ThemeRegistry';
+import Navbar from './components/Navbar';
 
 export const metadata = {
   title: '隨旅拍',
@@ -11,7 +12,8 @@ export default function RootLayout(props) {
     <html lang="zh-TW">
       <body>
         <ThemeRegistry options={{ key: 'mui' }}>
-        {children}
+          <Navbar></Navbar>
+          {/* {children} */}
         </ThemeRegistry>
       </body>
     </html>
