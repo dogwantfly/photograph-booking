@@ -79,11 +79,11 @@ function Navbar() {
 
   return (
     <AppBar
-      position="static"
+      position="relative"
       sx={{
-        // bgcolor: 'grey.300',
         py: '1.5rem',
         boxShadow: 0,
+        zIndex: 999
       }}
       style={{
         background: 'linear-gradient(#f7f7f7, #f7f7f7, #f7f7f7, #f7f7f700)'

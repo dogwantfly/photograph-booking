@@ -10,10 +10,14 @@ export default function RootLayout(props) {
   const { children } = props;
   return (
     <html lang="zh-TW">
-      <body>
+      <body
+        style={{
+          overflowX: 'hidden'
+        }}
+      >
         <ThemeRegistry options={{ key: 'mui' }}>
           <Navbar></Navbar>
-          {/* {children} */}
+          {children}
         </ThemeRegistry>
       </body>
     </html>
