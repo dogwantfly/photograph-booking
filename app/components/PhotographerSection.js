@@ -151,7 +151,7 @@ export default function PhotographerSection() {
           overflow: 'hidden',
         }}
       >
-        <Container sx={{ position: 'relative', zIndex: 5 }}>
+        <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 5 }}>
           <Typography
             variant="h3"
             component="h2"
@@ -178,15 +178,15 @@ export default function PhotographerSection() {
               breakpoints={{
                 '@0.00': {
                   slidesPerView: 1,
-                  spaceBetween: 10,
+                  spaceBetween: 24,
                 },
                 '@0.75': {
                   slidesPerView: 2,
-                  spaceBetween: 20,
+                  spaceBetween: 24,
                 },
                 '@1.00': {
                   slidesPerView: 4,
-                  spaceBetween: 30,
+                  spaceBetween: 24,
                 },
               }}
             >

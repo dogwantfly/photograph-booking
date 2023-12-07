@@ -44,7 +44,7 @@ export default function HomePage() {
           >
             <Image
               alt="faq-bg-l"
-              src="/img_fag_l.png"
+              src="/img_fag_l.webp"
               width="616"
               height="744"
               style={{
@@ -65,7 +65,7 @@ export default function HomePage() {
           >
             <Image
               alt="faq-bg-r"
-              src="/img_faq_r.png"
+              src="/img_faq_r.webp"
               width="320"
               height="320"
               style={{
@@ -111,20 +111,20 @@ export default function HomePage() {
                 sx={{
                   paddingTop: 5,
                   paddingRight: 5,
-                  maxWidth: '440px',
+                  maxWidth: '480px',
                 }}
               >
                 <Image
                   alt="faq-image"
-                  src="/faq-image.png"
+                  src="/faq-image.webp"
                   width="440"
                   height="600"
                   style={{
                     maxWidth: '100%',
-                    height: 'auto',
                     aspectRatio: '3 / 4',
                     objectFit: 'cover',
                     display: 'block',
+                    borderRadius: '0.75rem',
                   }}
                 />
               </Box>

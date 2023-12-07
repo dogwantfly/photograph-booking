@@ -1,29 +1,33 @@
 const marquee = [
   {
     slogan: 'Capture the Journey, Freeze the Beauty',
-    icons: ['/marquee/smile.svg', '/marquee/local_camera.svg', '/marquee/landscape.svg']
+    icons: [
+      '/marquee/smile.svg',
+      '/marquee/local_camera.svg',
+      '/marquee/landscape.svg',
+    ],
   },
   {
     slogan: 'Every Fleeting Moment on Your Journey',
-    icons: ['/marquee/add_camera.svg', '/marquee/global.svg']
+    icons: ['/marquee/add_camera.svg', '/marquee/global.svg'],
   },
   {
     slogan: 'Travel, Beauty, Photography',
-    icons: ['/marquee/plane.svg', '/marquee/camera.svg', '/marquee/photo.svg']
+    icons: ['/marquee/plane.svg', '/marquee/camera.svg', '/marquee/photo.svg'],
   },
   {
     slogan: 'Capture in a Blink, Cherish for a Lifetime',
-    icons: ['/marquee/watch.svg', '/marquee/book.svg']
+    icons: ['/marquee/watch.svg', '/marquee/book.svg'],
   },
   {
     slogan: 'Photography, Travel, Endless Possibilities',
-    icons: ['/marquee/bag.svg', '/marquee/add_camera.svg']
+    icons: ['/marquee/bag.svg', '/marquee/add_camera.svg'],
   },
   {
     slogan: 'Beauty, Frame by Frame',
-    icons: ['/marquee/frame.svg']
-  }
-]
+    icons: ['/marquee/frame.svg'],
+  },
+];
 
 // 後續會改以 API 取資料
 const photographers = [
@@ -33,34 +37,34 @@ const photographers = [
     rate: 5.0,
     catagories: ['商業攝影', '旅遊拍攝', '風格街拍'],
     price: 1500,
-    img_url: '/photographers/photographer-card-2.png',
+    img_url: '/photographers/photographer-card-1.webp',
     id: 1,
   },
   {
     name: '大雄',
     location: '台南',
     rate: 4.5,
-    catagories: ['人像攝影', '旅遊拍攝', '風格街拍','活動紀錄'],
+    catagories: ['人像攝影', '旅遊拍攝', '風格街拍', '活動紀錄'],
     price: 1200,
-    img_url: '/photographers/photographer-card-4.png',
+    img_url: '/photographers/photographer-card-2.webp',
     id: 2,
   },
   {
     name: '周周',
     location: '台中',
     rate: 5.0,
-    catagories: ['旅遊拍攝','人像攝影', '風格街拍'],
+    catagories: ['旅遊拍攝', '人像攝影', '風格街拍'],
     price: 2000,
-    img_url: '/photographers/photographer-card-1.png',
+    img_url: '/photographers/photographer-card-3.webp',
     id: 3,
   },
   {
     name: 'Angus',
     location: '屏東',
     rate: 4.7,
-    catagories: ['風格街拍','旅遊拍攝','商業攝影'  ],
+    catagories: ['風格街拍', '旅遊拍攝', '商業攝影'],
     price: 1500,
-    img_url: '/photographers/photographer-card-3.png',
+    img_url: '/photographers/photographer-card-4.webp',
     id: 4,
   },
   {
@@ -69,39 +73,39 @@ const photographers = [
     rate: 5.0,
     catagories: ['商業攝影', '旅遊拍攝', '風格街拍'],
     price: 1500,
-    img_url: '/photographers/photographer-card-2.png',
+    img_url: '/photographers/photographer-card-1.webp',
     id: 5,
   },
   {
     name: '大雄',
     location: '台南',
     rate: 4.5,
-    catagories: ['人像攝影', '旅遊拍攝', '風格街拍','活動紀錄'],
+    catagories: ['人像攝影', '旅遊拍攝', '風格街拍', '活動紀錄'],
     price: 1200,
-    img_url: '/photographers/photographer-card-4.png',
+    img_url: '/photographers/photographer-card-2.webp',
     id: 6,
   },
   {
     name: '周周',
     location: '台中',
     rate: 5.0,
-    catagories: ['旅遊拍攝','人像攝影', '風格街拍'],
+    catagories: ['旅遊拍攝', '人像攝影', '風格街拍'],
     price: 2000,
-    img_url: '/photographers/photographer-card-1.png',
+    img_url: '/photographers/photographer-card-3.webp',
     id: 7,
   },
   {
     name: 'Angus',
     location: '屏東',
     rate: 4.7,
-    catagories: ['風格街拍','旅遊拍攝','商業攝影'  ],
+    catagories: ['風格街拍', '旅遊拍攝', '商業攝影'],
     price: 1500,
-    img_url: '/photographers/photographer-card-3.png',
+    img_url: '/photographers/photographer-card-4.webp',
     id: 8,
   },
 ];
 
-const faq =  [
+const faq = [
   {
     question: '什麼是隨行攝影預約服務？',
     answer:
@@ -122,8 +126,7 @@ const faq =  [
   },
   {
     question: '有哪些支付方式？',
-    answer:
-      '目前提供信用卡、現金轉帳等方式。',
+    answer: '目前提供信用卡、現金轉帳等方式。',
     id: 3,
   },
   {
@@ -152,8 +155,7 @@ const faq =  [
   },
   {
     question: '我可以要求原始檔案嗎？',
-    answer:
-      '這取決於攝影師的政策，具體細節請在預約前與攝影師確認。',
+    answer: '這取決於攝影師的政策，具體細節請在預約前與攝影師確認。',
     id: 8,
   },
   {
@@ -172,5 +174,5 @@ const faq =  [
 module.exports = {
   photographers,
   marquee,
-  faq
+  faq,
 };

@@ -14,9 +14,9 @@ import Button from '@mui/material/Button';
 import StarIcon from '@mui/icons-material/star';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Noto_Sans_TC } from 'next/font/google';
-import * as theme from '@/app/lib/theme'
+import * as theme from '@/app/lib/theme';
 
-const black_card_text = theme.gradient.black_card_text
+const black_card_text = theme.gradient.black_card_text;
 
 const noto_sans_tc = Noto_Sans_TC({
   subsets: ['latin'],
@@ -29,7 +29,7 @@ export default function PhotographerCard({
   rate,
   catagories,
   price,
-  img_url
+  img_url,
 }) {
   const theme = {
     secondary: 'rgba(234, 80, 123, 1)',
@@ -43,6 +43,7 @@ export default function PhotographerCard({
     <Card
       sx={{
         position: 'relative',
+        borderRadius: '0.75rem',
       }}
     >
       <Image
@@ -59,8 +60,8 @@ export default function PhotographerCard({
         }}
         priority={true}
       />
-       
-          <CardContent
+
+      <CardContent
         sx={{
           padding: 0,
           position: 'absolute',
@@ -77,7 +78,7 @@ export default function PhotographerCard({
             justifyContent: 'space-between',
             padding: 2,
             position: 'absolute',
-            zIndex: 2
+            zIndex: 2,
           }}
         >
           <Typography
@@ -93,13 +94,13 @@ export default function PhotographerCard({
           </Typography>
         </Box>
         <CardActionArea
-        component="a"
-        href="/"
-        sx={{
-          width: '100%',
-          height: '100%'
-        }}
-      /> 
+          component="a"
+          href="/"
+          sx={{
+            width: '100%',
+            height: '100%',
+          }}
+        />
         <Box
           sx={{
             paddingTop: 7,
@@ -111,52 +112,58 @@ export default function PhotographerCard({
             zIndex: 3,
             bottom: 0,
             left: 0,
-            right: 0
+            right: 0,
           }}
         >
-          <Box sx={{
-            display: 'flex',
-            alignItems: 'center',
-            marginBottom: 1.5,
-
-          }}>
-          <Typography
-            variant="h3"
-            component="h3"
+          <Box
             sx={{
-              fontSize: 18,
+              display: 'flex',
+              alignItems: 'center',
+              marginBottom: 1.5,
             }}
-            className={noto_sans_tc.className}
           >
-            {name}{' '}
-            
-          </Typography>
-          <StarIcon
+            <Typography
+              variant="h3"
+              component="h3"
+              sx={{
+                fontSize: 18,
+              }}
+              className={noto_sans_tc.className}
+            >
+              {name}{' '}
+            </Typography>
+            <StarIcon
               sx={{
                 marginLeft: 1.5,
                 marginRight: 1,
-                fontSize: 16
+                fontSize: 16,
               }}
             />
-            
-            <Typography
-            sx={{
-              fontSize: 14,
-              fontWeight: 700
-            }}
-            className={noto_sans_tc.className}
-          >
-            {rate.toFixed(1)}
-          </Typography>
-          </Box>
-         
-          <Stack direction="row" spacing={1} flexWrap="nowrap" mb={1.5} sx={{ 
-            overflowX: 'auto',
 
-            '&::-webkit-scrollbar': {
-            display: 'none'
-          }
-          }}>
+            <Typography
+              sx={{
+                fontSize: 14,
+                fontWeight: 700,
+              }}
+              className={noto_sans_tc.className}
+            >
+              {rate.toFixed(1)}
+            </Typography>
+          </Box>
+
+          <Stack
+            direction="row"
+            spacing={1}
+            flexWrap="nowrap"
+            mb={1.5}
+            sx={{
+              overflowX: 'auto',
+
+              '&::-webkit-scrollbar': {
+                display: 'none',
+              },
+            }}
+          >
             {catagories.map((item, index) => (
               <Chip
                 label={item}
@@ -166,21 +173,21 @@ export default function PhotographerCard({
                   color: 'white',
                   backgroundColor: 'rgba(255, 255, 255, 0.2)',
                   '.MuiChip-label': {
-                    padding: '0px 8px'
+                    padding: '0px 8px',
                   },
                   borderRadius: '4px',
-                  height: 'auto'
+                  height: 'auto',
                 }}
                 className={noto_sans_tc.className}
               />
             ))}
           </Stack>
           <Typography className={noto_sans_tc.className}>
-            NT$ {price.toLocaleString("en-US")} / 小時
+            NT$ {price.toLocaleString('en-US')} / 小時
           </Typography>
         </Box>
       </CardContent>
-     
+
       <CardActions
         sx={{
           position: 'absolute',
