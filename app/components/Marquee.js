@@ -3,7 +3,6 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Image from 'next/image';
 import { marquee as data } from '../lib/placeholder-data';
-import * as theme from '@/app/lib/theme';
 
 const oswald = Oswald({
   subsets: ['latin'],
@@ -13,18 +12,18 @@ const oswald = Oswald({
 export default function Marquee() {
   return (
     <Box
-      sx={{
+      sx={(theme) => ({
         display: 'flex',
         flexWrap: 'nowrap',
         overflowX: 'hidden',
         gap: 4,
         alignItems: 'center',
-        backgroundColor: theme.macaron,
+        backgroundColor: theme.palette.macaron.main,
         paddingY: 2,
         border: '1px solid rgba(212, 212, 212, 1)',
         borderRight: 0,
         borderLeft: 0,
-      }}
+      })}
       component="section"
     >
       <Box

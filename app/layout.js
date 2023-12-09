@@ -1,6 +1,5 @@
 import ThemeRegistry from '@/app/components/ThemeRegistry';
 import Footer from '@/app/components/Footer';
-import './globals.css';
 
 export const metadata = {
   title: {

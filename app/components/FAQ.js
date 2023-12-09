@@ -10,10 +10,6 @@ import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import { faq as qaData } from '../lib/placeholder-data';
 
-const theme = {
-  secondary: 'rgba(234, 80, 123, 1)'
-}
-
 export default function BasicAccordion() {
   const [expanded, setExpanded] = useState(['faq0']);
   const handleChange = (panel) => () => {
@@ -45,7 +41,7 @@ export default function BasicAccordion() {
           onChange={handleChange(`faq${qa.id}`)}
         >
           <AccordionSummary
-            expandIcon={ expanded.includes(`faq${qa.id}`) ? <RemoveIcon htmlColor={theme.secondary}/>: <AddIcon htmlColor="black"/> }
+            expandIcon={ expanded.includes(`faq${qa.id}`) ? <RemoveIcon color="secondary" htmlColor="secondary"/>: <AddIcon htmlColor="black"/> }
             aria-controls={`faq${qa.id}-content`}
             id={`faq${qa.id}-header`}
             sx={{
@@ -65,13 +61,13 @@ export default function BasicAccordion() {
               display: 'flex',
               paddingRight: 3
             }}>
-          <Typography sx={{
+          <Typography sx={(theme) => ({
               fontSize: 18,
               fontWeight: 700,
               marginRight: 1,
-              color: theme.secondary,
+              color: theme.palette.secondary.main,
               lineHeight: 1.2
-            }}>A.</Typography>
+            })}>A.</Typography>
             <Typography>{qa.answer}</Typography>
             </Box>
           </AccordionDetails>

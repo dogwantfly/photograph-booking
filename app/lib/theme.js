@@ -3,11 +3,6 @@
 import { createTheme } from '@mui/material/styles';
 import { Noto_Sans_TC, Inter } from 'next/font/google';
 
-export const primary_black = '#1F1300';
-export const pink = '#EA507B';
-export const skin = '#F1E9E1';
-export const macaron = 'rgba(255, 245, 211, 1)';
-
 export const gradient = {
   pink_btn_bg: 'linear-gradient(270deg, #EA507B 0%, #DD2D2D 100%)',
   white_banner_text: 'linear-gradient(180deg, rgba(247, 247, 247, 0) 0%, #F7F7F7 51.56%),linear-gradient(0deg, #1F1300, #1F1300)',
@@ -28,14 +23,14 @@ const inter = Inter({
 export default createTheme({
   palette: {
     primary: {
-      main: primary_black,
+      main: '#1F1300',
     },
     secondary: {
-      main: pink,
-      light: skin,
+      main: '#EA507B',
+      light: '#F1E9E1',
     },
     macaron: {
-      main: macaron,
+      main: 'rgba(255, 245, 211, 1)',
     },
     grey: {
       300: '#F7F7F7',

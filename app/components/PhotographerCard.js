@@ -189,19 +189,19 @@ export default function PhotographerCard({
       </CardContent>
 
       <CardActions
-        sx={{
+        sx={(theme) => ({
           position: 'absolute',
           right: 0,
           top: 0,
           zIndex: 3,
           '&:hover .MuiSvgIcon-root': {
-            color: theme.secondary,
+            color: theme.palette.secondary.main,
           },
-        }}
+        })}
       >
         <Button variant="text" onClick={addFavorite} sx={{ minWidth: 0 }}>
           <FavoriteIcon
-            sx={{ color: isFavorite ? theme.secondary : 'white' }}
+            sx={(theme) => ({ color: isFavorite ? theme.palette.secondary.main : 'white' })}
           />
         </Button>
       </CardActions>
