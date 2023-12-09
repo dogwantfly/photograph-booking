@@ -1,7 +1,7 @@
 'use client';
 
 import { createTheme } from '@mui/material/styles';
-import { Noto_Sans_TC, Inter, Oswald } from 'next/font/google';
+import { Noto_Sans_TC, Inter } from 'next/font/google';
 
 export const primary_black = '#1F1300';
 export const pink = '#EA507B';
@@ -23,10 +23,7 @@ const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '700'],
 });
-const oswald = Oswald({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-});
+
 
 export default createTheme({
   palette: {
@@ -54,7 +51,6 @@ export default createTheme({
     fontFamily: [
       noto_sans_tc.style.fontFamily,
       inter.style.fontFamily,
-      oswald.style.fontFamily,
       '-apple-system',
       'BlinkMacSystemFont',
       '"Segoe UI"',
