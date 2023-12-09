@@ -14,7 +14,7 @@ import Button from '@mui/material/Button';
 import StarIcon from '@mui/icons-material/star';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Noto_Sans_TC } from 'next/font/google';
-import * as theme from '@/app/lib/theme';
+import * as theme from '@/app/components/ThemeRegistry/theme';
 
 const black_card_text = theme.gradient.black_card_text;
 
