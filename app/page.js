@@ -109,8 +109,8 @@ export default function HomePage() {
             >
               <Box
                 sx={{
-                  paddingTop: 5,
-                  paddingRight: 5,
+                  pt: 5,
+                  pr: 5,
                   maxWidth: '480px',
                 }}
               >

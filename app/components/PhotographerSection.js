@@ -136,8 +136,8 @@ export default function PhotographerSection() {
         component="section"
         sx={{
           position: 'relative',
-          paddingTop: 10,
-          paddingBottom: 16,
+          pt: 10,
+          pb: 16,
           backgroundImage: `url(${photographerBg.src})`,
           backgroundSize: {
             xs: 'cover',

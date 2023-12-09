@@ -63,7 +63,7 @@ export default function PhotographerCard({
 
       <CardContent
         sx={{
-          padding: 0,
+          p: 0,
           position: 'absolute',
           top: 0,
           bottom: 0,
@@ -76,7 +76,7 @@ export default function PhotographerCard({
           sx={{
             display: 'flex',
             justifyContent: 'space-between',
-            padding: 2,
+            p: 2,
             position: 'absolute',
             zIndex: 2,
           }}
@@ -86,7 +86,7 @@ export default function PhotographerCard({
               color: 'rgba(31, 19, 0, 1)',
               borderLeft: '2px solid rgba(31, 19, 0, 1)',
               fontWeight: 700,
-              paddingLeft: 1.5,
+              pl: 1.5,
             }}
             className={noto_sans_tc.className}
           >
@@ -103,10 +103,10 @@ export default function PhotographerCard({
         />
         <Box
           sx={{
-            paddingTop: 7,
-            paddingBottom: 1,
+            pt: 7,
+            pb: 1,
             background: black_card_text,
-            padding: 2,
+            p: 2,
             color: 'white',
             position: 'absolute',
             zIndex: 3,
@@ -173,7 +173,7 @@ export default function PhotographerCard({
                   color: 'white',
                   backgroundColor: 'rgba(255, 255, 255, 0.2)',
                   '.MuiChip-label': {
-                    padding: '0px 8px',
+                    p: '0px 8px',
                   },
                   borderRadius: '4px',
                   height: 'auto',

@@ -59,7 +59,7 @@ export default function BasicAccordion() {
           <AccordionDetails>
             <Box sx={{
               display: 'flex',
-              paddingRight: 3
+              pr: 3
             }}>
           <Typography sx={(theme) => ({
               fontSize: 18,
