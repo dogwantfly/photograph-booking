@@ -7,7 +7,7 @@ import { marquee as data } from '../lib/placeholder-data';
 const oswald = Oswald({
   subsets: ['latin'],
   weight: ['400', '700'],
-})
+});
 
 export default function Marquee() {
   return (
@@ -70,7 +70,7 @@ export default function Marquee() {
                       xs: 24,
                       md: 48,
                     },
-                    fontFamily: oswald.style.fontFamily
+                    fontFamily: oswald.style.fontFamily,
                   }}
                 >
                   {item.slogan}

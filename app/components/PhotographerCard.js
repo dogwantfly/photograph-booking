@@ -201,7 +201,9 @@ export default function PhotographerCard({
       >
         <Button variant="text" onClick={addFavorite} sx={{ minWidth: 0 }}>
           <FavoriteIcon
-            sx={(theme) => ({ color: isFavorite ? theme.palette.secondary.main : 'white' })}
+            sx={(theme) => ({
+              color: isFavorite ? theme.palette.secondary.main : 'white',
+            })}
           />
         </Button>
       </CardActions>

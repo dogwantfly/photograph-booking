@@ -5,9 +5,12 @@ import { Noto_Sans_TC, Inter } from 'next/font/google';
 
 export const gradient = {
   pink_btn_bg: 'linear-gradient(270deg, #EA507B 0%, #DD2D2D 100%)',
-  white_banner_text: 'linear-gradient(180deg, rgba(247, 247, 247, 0) 0%, #F7F7F7 51.56%),linear-gradient(0deg, #1F1300, #1F1300)',
-  white_header_bg: 'linear-gradient(180deg, #F7F7F7 50%, rgba(247, 247, 247, 0) 100%)',
-  black_card_text: 'linear-gradient(180deg, rgba(31, 19, 0, 0) 0%, #1F1300 100%)',
+  white_banner_text:
+    'linear-gradient(180deg, rgba(247, 247, 247, 0) 0%, #F7F7F7 51.56%),linear-gradient(0deg, #1F1300, #1F1300)',
+  white_header_bg:
+    'linear-gradient(180deg, #F7F7F7 50%, rgba(247, 247, 247, 0) 100%)',
+  black_card_text:
+    'linear-gradient(180deg, rgba(31, 19, 0, 0) 0%, #1F1300 100%)',
 };
 
 const noto_sans_tc = Noto_Sans_TC({
@@ -18,7 +21,6 @@ const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '700'],
 });
-
 
 export default createTheme({
   palette: {

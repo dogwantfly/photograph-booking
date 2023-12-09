@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useState } from 'react';
 import Accordion from '@mui/material/Accordion';
@@ -14,9 +14,9 @@ export default function BasicAccordion() {
   const [expanded, setExpanded] = useState(['faq0']);
   const handleChange = (panel) => () => {
     if (expanded.includes(panel)) {
-      setExpanded(expanded.filter(item => item !== panel))
+      setExpanded(expanded.filter((item) => item !== panel));
     } else {
-      setExpanded([...expanded, panel])
+      setExpanded([...expanded, panel]);
     }
   };
   return (
@@ -32,43 +32,59 @@ export default function BasicAccordion() {
               borderRadius: 0,
             },
             '&::before': {
-              display: 'none'
+              display: 'none',
             },
             border: '1px solid rgba(31, 19, 0, 1)',
-            marginBottom: 2
+            marginBottom: 2,
           }}
           square={true}
           onChange={handleChange(`faq${qa.id}`)}
         >
           <AccordionSummary
-            expandIcon={ expanded.includes(`faq${qa.id}`) ? <RemoveIcon color="secondary" htmlColor="secondary"/>: <AddIcon htmlColor="black"/> }
+            expandIcon={
+              expanded.includes(`faq${qa.id}`) ? (
+                <RemoveIcon color="secondary" htmlColor="secondary" />
+              ) : (
+                <AddIcon htmlColor="black" />
+              )
+            }
             aria-controls={`faq${qa.id}-content`}
             id={`faq${qa.id}-header`}
             sx={{
-              alignItems: 'center'
+              alignItems: 'center',
             }}
           >
-            <Typography sx={{
-              fontSize: 18,
-              fontWeight: 700,
-              marginRight: 1,
-              lineHeight: 1.2
-            }}>Q.</Typography>
+            <Typography
+              sx={{
+                fontSize: 18,
+                fontWeight: 700,
+                marginRight: 1,
+                lineHeight: 1.2,
+              }}
+            >
+              Q.
+            </Typography>
             <Typography>{qa.question}</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Box sx={{
-              display: 'flex',
-              pr: 3
-            }}>
-          <Typography sx={(theme) => ({
-              fontSize: 18,
-              fontWeight: 700,
-              marginRight: 1,
-              color: theme.palette.secondary.main,
-              lineHeight: 1.2
-            })}>A.</Typography>
-            <Typography>{qa.answer}</Typography>
+            <Box
+              sx={{
+                display: 'flex',
+                pr: 3,
+              }}
+            >
+              <Typography
+                sx={(theme) => ({
+                  fontSize: 18,
+                  fontWeight: 700,
+                  marginRight: 1,
+                  color: theme.palette.secondary.main,
+                  lineHeight: 1.2,
+                })}
+              >
+                A.
+              </Typography>
+              <Typography>{qa.answer}</Typography>
             </Box>
           </AccordionDetails>
         </Accordion>
