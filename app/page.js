@@ -27,7 +27,7 @@ export default function HomePage() {
       >
         <Container
           sx={{
-            paddingY: 6,
+            py: 6,
           }}
         >
           <Box

@@ -19,7 +19,7 @@ export default function Marquee() {
         gap: 4,
         alignItems: 'center',
         backgroundColor: theme.palette.macaron.main,
-        paddingY: 2,
+        py: 2,
         border: '1px solid rgba(212, 212, 212, 1)',
         borderRight: 0,
         borderLeft: 0,
