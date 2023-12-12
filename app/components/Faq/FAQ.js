@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
-import { faq as qaData } from '../lib/placeholder-data';
+import { faq as qaData } from '../../lib/placeholder-data';
 
 export default function BasicAccordion() {
   const [expanded, setExpanded] = useState(['faq0']);
@@ -20,7 +20,13 @@ export default function BasicAccordion() {
     }
   };
   return (
-    <ul>
+    <Box
+      sx={{
+        listStyle: 'none',
+        px: 0,
+      }}
+      component="ul"
+    >
       {qaData.map((qa, index) => (
         <Accordion
           component="li"
@@ -89,6 +95,6 @@ export default function BasicAccordion() {
           </AccordionDetails>
         </Accordion>
       ))}
-    </ul>
+    </Box>
   );
 }
