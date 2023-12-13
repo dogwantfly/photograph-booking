@@ -222,13 +222,23 @@ export default function PhotographerSection() {
             }}
           >
             <Link
-              sx={{
+              sx={(theme) => ({
                 color: 'white',
                 textAlign: 'center',
                 fontSize: 18,
                 display: 'flex',
                 alignItems: 'center',
-              }}
+                borderBottom: '2px solid transparent',
+                transition: 'all 0.2s',
+                pb: 1.5,
+                '&:hover': {
+                  color: theme.palette.secondary.main,
+                  borderColor: theme.palette.secondary.main,
+                  '.MuiSvgIcon-root': {
+                    color: theme.palette.secondary.main,
+                  },
+                },
+              })}
               underline="none"
               className={noto_sans_tc.className}
               href="/"
