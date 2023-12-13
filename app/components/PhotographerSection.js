@@ -10,6 +10,7 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
+import { useTheme } from '@mui/material/styles';
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -33,6 +34,8 @@ export default function PhotographerSection() {
   const photographerList = useRef();
   const link = useRef();
   const title = useRef();
+
+  const theme = useTheme();
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -180,16 +183,20 @@ export default function PhotographerSection() {
               slidesPerView={3}
               wrapperTag="ul"
               breakpoints={{
-                '@0.00': {
-                  slidesPerView: 1,
+                [theme.breakpoints.values.lg]: {
+                  slidesPerView: 4,
                   spaceBetween: 24,
                 },
-                '@0.75': {
+                [theme.breakpoints.values.md]: {
+                  slidesPerView: 3,
+                  spaceBetween: 24,
+                },
+                [theme.breakpoints.values.sm]: {
                   slidesPerView: 2,
                   spaceBetween: 24,
                 },
-                '@1.00': {
-                  slidesPerView: 4,
+                [theme.breakpoints.values.xs]: {
+                  slidesPerView: 1,
                   spaceBetween: 24,
                 },
               }}
