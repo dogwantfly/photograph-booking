@@ -1,22 +1,26 @@
 'use client';
 
+import 'swiper/css';
+import 'swiper/css/free-mode';
+
 import { useRef, useLayoutEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { FreeMode } from 'swiper/modules';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
-import Marquee from '@/app/components/Marquee';
-import PhotographerCard from '@/app/components/PhotographerCard';
-import EastIcon from '@mui/icons-material/East';
-import { photographers } from '@/app/lib/placeholder-data';
+
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+import Marquee from '@/app/components/Marquee';
+import PhotographerCard from '@/app/components/PhotographerCard';
+import { photographers } from '@/app/lib/placeholder-data';
+
 import { Noto_Sans_TC } from 'next/font/google';
-import photographerBg from '../../public/phorographer-bg.png';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/free-mode';
+import EastIcon from '@mui/icons-material/East';
+import photographerBg from '../../public/photographers-bg.webp';
 
 const noto_sans_tc = Noto_Sans_TC({
   subsets: ['latin'],

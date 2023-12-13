@@ -1,7 +1,7 @@
-import { Oswald } from 'next/font/google';
+import Image from 'next/image';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Image from 'next/image';
+import { Oswald } from 'next/font/google';
 import { marquee as data } from '../lib/placeholder-data';
 
 const oswald = Oswald({

@@ -1,8 +1,8 @@
+import Image from 'next/image';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import Image from 'next/image';
 import FAQAccordion from '@/app/components/Faq/FAQ';
 import { Noto_Sans_TC } from 'next/font/google';
 

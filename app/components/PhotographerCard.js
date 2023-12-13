@@ -31,9 +31,6 @@ export default function PhotographerCard({
   price,
   img_url,
 }) {
-  const theme = {
-    secondary: 'rgba(234, 80, 123, 1)',
-  };
   const [isFavorite, setIsFavorite] = useState(false);
   function addFavorite() {
     setIsFavorite(!isFavorite);
