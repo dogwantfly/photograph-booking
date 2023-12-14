@@ -13,12 +13,17 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import StarIcon from '@mui/icons-material/star';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import { Noto_Sans_TC } from 'next/font/google';
+import { Noto_Sans_TC, Inter } from 'next/font/google';
 import * as theme from '@/app/components/ThemeRegistry/theme';
 
 const black_card_text = theme.gradient.black_card_text;
 
 const noto_sans_tc = Noto_Sans_TC({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+});
+
+const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '700'],
 });
@@ -80,8 +85,8 @@ export default function PhotographerCard({
         >
           <Typography
             sx={{
-              color: 'rgba(31, 19, 0, 1)',
-              borderLeft: '2px solid rgba(31, 19, 0, 1)',
+              color: 'white',
+              borderLeft: '2px solid white',
               fontWeight: 700,
               pl: 1.5,
             }}
@@ -141,6 +146,7 @@ export default function PhotographerCard({
               sx={{
                 fontSize: 14,
                 fontWeight: 700,
+                letterSpacing: '0.0175rem',
               }}
               className={noto_sans_tc.className}
             >
@@ -154,11 +160,7 @@ export default function PhotographerCard({
             flexWrap="nowrap"
             mb={1.5}
             sx={{
-              overflowX: 'auto',
-
-              '&::-webkit-scrollbar': {
-                display: 'none',
-              },
+              overflowX: 'hidden',
             }}
           >
             {catagories.map((item, index) => (
@@ -179,9 +181,12 @@ export default function PhotographerCard({
               />
             ))}
           </Stack>
-          <Typography className={noto_sans_tc.className}>
-            NT$ {price.toLocaleString('en-US')} / 小時
-          </Typography>
+          <Box display="flex">
+            <Box className={inter.className}>
+              NT$ {price.toLocaleString('en-US')}{' '}
+            </Box>
+            <Typography>/ 小時</Typography>
+          </Box>
         </Box>
       </CardContent>
 
