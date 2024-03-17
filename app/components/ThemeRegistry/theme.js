@@ -1,7 +1,16 @@
 'use client';
-
-import { createTheme } from '@mui/material/styles';
 import { Noto_Sans_TC, Inter } from 'next/font/google';
+import { createTheme } from '@mui/material/styles';
+
+const noto_sans_tc = Noto_Sans_TC({
+  weight: ['400', '500', '700'],
+  subsets: ['latin'],
+});
+
+const inter = Inter({
+  weight: ['400', '500', '700'],
+  subsets: ['latin'],
+});
 
 export const gradient = {
   pink_btn_bg: 'linear-gradient(270deg, #EA507B 0%, #DD2D2D 100%)',
@@ -13,16 +22,7 @@ export const gradient = {
     'linear-gradient(180deg, rgba(31, 19, 0, 0) 0%, #1F1300 100%)',
 };
 
-const noto_sans_tc = Noto_Sans_TC({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-});
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-});
-
-export default createTheme({
+const themeOptions = {
   palette: {
     primary: {
       main: '#1F1300',
@@ -33,6 +33,9 @@ export default createTheme({
     },
     macaron: {
       main: 'rgba(255, 245, 211, 1)',
+    },
+    skin: {
+      main: '#F1E9E1',
     },
     grey: {
       300: '#F7F7F7',
@@ -60,59 +63,73 @@ export default createTheme({
     ].join(','),
     h1: {
       fontSize: '3rem',
+      fontWeight: 700,
       lineHeight: 1.2,
       letterSpacing: '0.125rem',
     },
     h2: {
       fontSize: '2rem',
+      fontWeight: 700,
       lineHeight: 1.2,
       letterSpacing: '0.125rem',
     },
     h3: {
       fontSize: '1.75rem',
+      fontWeight: 700,
       lineHeight: 1.2,
       letterSpacing: '0.125rem',
     },
     h4: {
       fontSize: '1.5rem',
+      fontWeight: 700,
       lineHeight: 1.2,
       letterSpacing: '0.125rem',
     },
     h5: {
       fontSize: '1.25rem',
+      fontWeight: 400,
       lineHeight: 1.2,
       letterSpacing: '0.125rem',
     },
     title: {
       fontSize: '1.125rem',
+      fontWeight: 700,
       lineHeight: 1.2,
       letterSpacing: '0.125rem',
     },
     body1: {
       fontSize: '1rem',
+      fontWeight: 400,
       lineHeight: 1.5,
       letterSpacing: '0.125rem',
     },
     body2: {
       fontSize: '1rem',
+      fontWeight: 400,
       lineHeight: 1.2,
       letterSpacing: '0.125rem',
     },
     button: {
       fontSize: '0.875rem',
+      fontWeight: 400,
       lineHeight: 1.5,
       letterSpacing: '0.125rem',
     },
     button_bold: {
       fontSize: '0.875rem',
+      fontWeight: 700,
       lineHeight: 1.2,
       letterSpacing: '0.125rem',
-      fontWeight: 700,
     },
     button_sm: {
       fontSize: '0.75rem',
+      fontWeight: 400,
       lineHeight: 1.2,
       letterSpacing: '0.125rem',
     },
   },
-});
+};
+
+const theme = createTheme(themeOptions);
+
+export default theme;

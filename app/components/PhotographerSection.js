@@ -15,9 +15,9 @@ import { useTheme } from '@mui/material/styles';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import Marquee from '@/app/components/Marquee';
-import PhotographerCard from '@/app/components/PhotographerCard';
-import { photographers } from '@/app/lib/placeholder-data';
+import Marquee from '@components/Marquee';
+import PhotographerCard from '@components/PhotographerCard';
+import { photographers } from '@lib/placeholder-data';
 
 import { Noto_Sans_TC } from 'next/font/google';
 import EastIcon from '@mui/icons-material/East';
@@ -140,7 +140,7 @@ export default function PhotographerSection() {
       <Marquee />
       <Box
         ref={background}
-        component="section"
+        component='section'
         sx={{
           position: 'relative',
           pt: 10,
@@ -158,10 +158,10 @@ export default function PhotographerSection() {
           overflow: 'hidden',
         }}
       >
-        <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 5 }}>
+        <Container maxWidth='xl' sx={{ position: 'relative', zIndex: 5 }}>
           <Typography
-            variant="h3"
-            component="h2"
+            variant='h3'
+            component='h2'
             sx={{
               color: 'white',
               fontSize: 32,
@@ -181,7 +181,7 @@ export default function PhotographerSection() {
               modules={[FreeMode]}
               spaceBetween={50}
               slidesPerView={3}
-              wrapperTag="ul"
+              wrapperTag='ul'
               breakpoints={{
                 [theme.breakpoints.values.lg]: {
                   slidesPerView: 4,
@@ -202,7 +202,7 @@ export default function PhotographerSection() {
               }}
             >
               {photographers.map((card) => (
-                <SwiperSlide tag="li" key={card.id}>
+                <SwiperSlide tag='li' key={card.id}>
                   <PhotographerCard
                     name={card.name}
                     location={card.location}
@@ -239,9 +239,9 @@ export default function PhotographerSection() {
                   },
                 },
               })}
-              underline="none"
+              underline='none'
               className={noto_sans_tc.className}
-              href="/"
+              href='/'
               ref={link}
             >
               瀏覽更多
