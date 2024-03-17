@@ -1,5 +1,5 @@
-import PhotographerSection from '@/app/components/PhotographerSection';
-import Faq from '@/app/components/Faq';
+import PhotographerSection from '@components/PhotographerSection';
+import Faq from '@components/Faq';
 
 export default function HomePage() {
   return (

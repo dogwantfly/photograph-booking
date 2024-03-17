@@ -1,5 +1,5 @@
-import ThemeRegistry from '@/app/components/ThemeRegistry';
-import Footer from '@/app/components/Footer';
+import ThemeRegistry from '@components/ThemeRegistry';
+import Footer from '@components/Footer';
 
 export const metadata = {
   title: {

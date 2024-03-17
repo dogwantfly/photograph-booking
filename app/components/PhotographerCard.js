@@ -14,7 +14,7 @@ import Button from '@mui/material/Button';
 import StarIcon from '@mui/icons-material/star';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Noto_Sans_TC, Inter } from 'next/font/google';
-import * as theme from '@/app/components/ThemeRegistry/theme';
+import * as theme from '@components/ThemeRegistry/theme';
 
 const black_card_text = theme.gradient.black_card_text;
 
@@ -96,8 +96,8 @@ export default function PhotographerCard({
           </Typography>
         </Box>
         <CardActionArea
-          component="a"
-          href="/"
+          component='a'
+          href='/'
           sx={{
             width: '100%',
             height: '100%',
@@ -125,8 +125,8 @@ export default function PhotographerCard({
             }}
           >
             <Typography
-              variant="h3"
-              component="h3"
+              variant='h3'
+              component='h3'
               sx={{
                 fontSize: 18,
               }}
@@ -155,9 +155,9 @@ export default function PhotographerCard({
           </Box>
 
           <Stack
-            direction="row"
+            direction='row'
             spacing={1}
-            flexWrap="nowrap"
+            flexWrap='nowrap'
             mb={1.5}
             sx={{
               overflowX: 'hidden',
@@ -181,7 +181,7 @@ export default function PhotographerCard({
               />
             ))}
           </Stack>
-          <Box display="flex">
+          <Box display='flex'>
             <Box className={inter.className}>
               NT$ {price.toLocaleString('en-US')}{' '}
             </Box>
@@ -201,7 +201,7 @@ export default function PhotographerCard({
           },
         })}
       >
-        <Button variant="text" onClick={addFavorite} sx={{ minWidth: 0 }}>
+        <Button variant='text' onClick={addFavorite} sx={{ minWidth: 0 }}>
           <FavoriteIcon
             sx={(theme) => ({
               color: isFavorite ? theme.palette.secondary.main : 'white',

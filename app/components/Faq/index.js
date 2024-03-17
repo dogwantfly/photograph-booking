@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import FAQAccordion from '@/app/components/Faq/FAQ';
+import FAQAccordion from '@components/Faq/FAQ';
 import { Noto_Sans_TC } from 'next/font/google';
 
 const noto_sans_tc = Noto_Sans_TC({
@@ -14,7 +14,7 @@ const noto_sans_tc = Noto_Sans_TC({
 export default function Faq() {
   return (
     <Box
-      component="section"
+      component='section'
       sx={{
         backgroundColor: 'rgba(247, 247, 247, 1)',
         position: 'relative',
@@ -39,10 +39,10 @@ export default function Faq() {
           }}
         >
           <Image
-            alt="faq-bg-l"
-            src="/img_fag_l.webp"
-            width="616"
-            height="744"
+            alt='faq-bg-l'
+            src='/img_fag_l.webp'
+            width='616'
+            height='744'
             style={{
               maxWidth: '100%',
               height: 'auto',
@@ -60,10 +60,10 @@ export default function Faq() {
           }}
         >
           <Image
-            alt="faq-bg-r"
-            src="/img_faq_r.webp"
-            width="320"
-            height="320"
+            alt='faq-bg-r'
+            src='/img_faq_r.webp'
+            width='320'
+            height='320'
             style={{
               objectFit: 'cover',
               display: 'block',
@@ -71,8 +71,8 @@ export default function Faq() {
           />
         </Box>
         <Typography
-          variant="h3"
-          component="h2"
+          variant='h3'
+          component='h2'
           sx={{
             fontSize: 32,
             textAlign: 'center',
@@ -111,10 +111,10 @@ export default function Faq() {
               }}
             >
               <Image
-                alt="faq-image"
-                src="/faq-image.webp"
-                width="440"
-                height="600"
+                alt='faq-image'
+                src='/faq-image.webp'
+                width='440'
+                height='600'
                 style={{
                   maxWidth: '100%',
                   aspectRatio: '3 / 4',
