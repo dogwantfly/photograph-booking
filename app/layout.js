@@ -6,12 +6,13 @@ export const metadata = {
     template: '%s | 隨旅拍',
     default: '隨旅拍',
   },
-  description: '隨行攝影預約服務',
+  description: '找到你的拍照神隊友',
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout(props) {
+  const { children } = props;
   return (
-    <html lang="en">
+    <html lang='zh-TW'>
       <body>
         <ThemeRegistry options={{ key: 'mui' }}>
           {children}

@@ -1,7 +1,16 @@
 'use client';
-
-import { createTheme } from '@mui/material/styles';
 import { Noto_Sans_TC, Inter } from 'next/font/google';
+import { createTheme } from '@mui/material/styles';
+
+const noto_sans_tc = Noto_Sans_TC({
+  weight: ['400', '500', '700'],
+  subsets: ['latin'],
+});
+
+const inter = Inter({
+  weight: ['400', '500', '700'],
+  subsets: ['latin'],
+});
 
 export const gradient = {
   pink_btn_bg: 'linear-gradient(270deg, #EA507B 0%, #DD2D2D 100%)',
@@ -13,16 +22,7 @@ export const gradient = {
     'linear-gradient(180deg, rgba(31, 19, 0, 0) 0%, #1F1300 100%)',
 };
 
-const noto_sans_tc = Noto_Sans_TC({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-});
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-});
-
-export default createTheme({
+const themeOptions = {
   palette: {
     primary: {
       main: '#1F1300',
@@ -33,6 +33,9 @@ export default createTheme({
     },
     macaron: {
       main: 'rgba(255, 245, 211, 1)',
+    },
+    skin: {
+      main: '#F1E9E1',
     },
     grey: {
       300: '#F7F7F7',
@@ -115,4 +118,8 @@ export default createTheme({
       letterSpacing: '0.125rem',
     },
   },
-});
+};
+
+const theme = createTheme(themeOptions);
+
+export default theme;
