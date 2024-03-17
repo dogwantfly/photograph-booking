@@ -171,8 +171,17 @@ const faq = [
     id: 10,
   },
 ];
+
+const uniqueLocations = new Set(photographers.map((p) => p.location));
+
+const locations = Array.from(uniqueLocations).map((location) => ({
+  label: location,
+  href: `#${location}`,
+}));
+
 module.exports = {
   photographers,
+  locations,
   marquee,
   faq,
 };
