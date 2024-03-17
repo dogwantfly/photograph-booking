@@ -20,10 +20,9 @@ export default function RootLayout(props) {
         }}
       >
         <ThemeRegistry options={{ key: 'mui' }}>
+          <Navbar />
           {children}
           <Footer />
-          <Navbar></Navbar>
-          {children}
         </ThemeRegistry>
       </body>
     </html>
