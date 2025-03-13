@@ -3,10 +3,18 @@
 import { useLayoutEffect, useRef } from 'react';
 import Box from '@mui/system/Box';
 import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+import Card from '@mui/material/Card';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
 import { useTheme } from '@mui/material/styles';
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+import bannerImg_1 from '@images/banner/banner-1.webp';
+import bannerImg_2 from '@images/banner/banner-2.webp';
+import bannerImg_3 from '@images/banner/banner-3.webp';
 
 export default function IntroSection() {
   const theme = useTheme();
@@ -65,6 +73,58 @@ export default function IntroSection() {
       });
   }, []);
 
+  const cards = [
+    {
+      title: '商品攝影',
+      description: '讓您的商品質感升級',
+      image: bannerImg_1,
+    },
+    {
+      title: '旅遊跟拍',
+      description: '出門就是要好好玩！青春回憶永存',
+      image: bannerImg_2,
+    },
+    {
+      title: '人物攝影',
+      description: '企業訪談、提升品牌力！',
+      image: bannerImg_3,
+    },
+  ];
+
+  const StyledCard = ({ image, title, description }) => (
+    <Card
+      sx={{
+        borderRadius: '120px 120px 16px 16px',
+        boxShadow: 3,
+        position: 'relative',
+        overflow: 'hidden',
+        height: '100%',
+      }}
+    >
+      <CardMedia
+        component='img'
+        height={{md: '556px', sx: '424px'}}
+        image={image.src}
+        alt={title}
+        sx={{ objectFit: 'cover' }}
+      />
+      <CardContent
+        sx={{
+          position: 'absolute',
+          bottom: 0,
+          bgcolor: 'rgba(0,0,0,0.5)',
+          color: 'white',
+          width: '100%',
+        }}
+      >
+        <Typography variant='h6' fontWeight='bold'>
+          {title}
+        </Typography>
+        <Typography variant='body2'>{description}</Typography>
+      </CardContent>
+    </Card>
+  );
+
   return (
     <Box
       component='section'
@@ -119,6 +179,15 @@ export default function IntroSection() {
         >
           這不單單只是拍照攝影而已，因為我們始終把您的需求放在最前面
         </Typography>
+      </Box>
+      <Box sx={{ flexGrow: 1, pt: 16, pb: 4, px: 2, bgcolor: '#FAF4EE' }}>
+        <Grid container spacing={3} justifyContent='center'>
+          {cards.map((card, index) => (
+            <Grid item xs={12} md={4} key={index}>
+              <StyledCard {...card} />
+            </Grid>
+          ))}
+        </Grid>
       </Box>
     </Box>
   );
