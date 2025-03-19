@@ -22,6 +22,7 @@ export default function IntroSection() {
   const background = useRef(null);
   const title = useRef(null);
   const titleH2 = useRef(null);
+  const introList = useRef(null);
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -70,7 +71,25 @@ export default function IntroSection() {
         width: '100%',
         height: '100%',
         borderRadius: '0',
-      });
+      })
+      .from(
+        introList.current,
+        {
+          x: '100vw',
+          opacity: 0,
+        },
+        1
+      )
+      .to(
+        introList.current,
+        {
+          x: 0,
+          opacity: 1,
+          ease: 'power1.inOut',
+          duration: 2,
+        },
+        2
+      );
   }, []);
 
   const cards = [
@@ -91,39 +110,6 @@ export default function IntroSection() {
     },
   ];
 
-  const StyledCard = ({ image, title, description }) => (
-    <Card
-      sx={{
-        borderRadius: '120px 120px 16px 16px',
-        boxShadow: 3,
-        position: 'relative',
-        overflow: 'hidden',
-        height: '100%',
-      }}
-    >
-      <CardMedia
-        component='img'
-        height={{md: '556px', sx: '424px'}}
-        image={image.src}
-        alt={title}
-        sx={{ objectFit: 'cover' }}
-      />
-      <CardContent
-        sx={{
-          position: 'absolute',
-          bottom: 0,
-          bgcolor: 'rgba(0,0,0,0.5)',
-          color: 'white',
-          width: '100%',
-        }}
-      >
-        <Typography variant='h6' fontWeight='bold'>
-          {title}
-        </Typography>
-        <Typography variant='body2'>{description}</Typography>
-      </CardContent>
-    </Card>
-  );
 
   return (
     <Box
@@ -180,11 +166,41 @@ export default function IntroSection() {
           這不單單只是拍照攝影而已，因為我們始終把您的需求放在最前面
         </Typography>
       </Box>
-      <Box sx={{ flexGrow: 1, pt: 16, pb: 4, px: 2, bgcolor: '#FAF4EE' }}>
+      <Box sx={{ flexGrow: 1, pt: 16, pb: 4, px: 2 }} ref={introList}>
         <Grid container spacing={3} justifyContent='center'>
           {cards.map((card, index) => (
             <Grid item xs={12} md={4} key={index}>
-              <StyledCard {...card} />
+              <Card
+                sx={{
+                  borderRadius: '120px 120px 16px 16px',
+                  boxShadow: 3,
+                  position: 'relative',
+                  overflow: 'hidden',
+                  height: '100%',
+                }}
+              >
+                <CardMedia
+                  component='img'
+                  height={{md: '556px', sx: '424px'}}
+                  image={card.image.src}
+                  alt={title}
+                  sx={{ objectFit: 'cover' }}
+                />
+                <CardContent
+                  sx={{
+                    position: 'absolute',
+                    bottom: 0,
+                    bgcolor: 'rgba(0,0,0,0.5)',
+                    color: 'white',
+                    width: '100%',
+                  }}
+                >
+                  <Typography variant='h6' fontWeight='bold'>
+                    {card.title}
+                  </Typography>
+                  <Typography variant='body2'>{card.description}</Typography>
+                </CardContent>
+              </Card>
             </Grid>
           ))}
         </Grid>
